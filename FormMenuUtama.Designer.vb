@@ -55,63 +55,63 @@ Partial Class FormMenuUtama
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(307, 192)
+        Me.Button2.Location = New System.Drawing.Point(307, 149)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(215, 46)
+        Me.Button2.Size = New System.Drawing.Size(215, 43)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Marketing"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(307, 262)
+        Me.Button3.Location = New System.Drawing.Point(307, 219)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(215, 46)
+        Me.Button3.Size = New System.Drawing.Size(215, 43)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Warehouse Finished Goods"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(307, 327)
+        Me.Button4.Location = New System.Drawing.Point(307, 284)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(215, 46)
+        Me.Button4.Size = New System.Drawing.Size(215, 43)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "Produksi"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(307, 390)
+        Me.Button5.Location = New System.Drawing.Point(307, 347)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(215, 46)
+        Me.Button5.Size = New System.Drawing.Size(215, 43)
         Me.Button5.TabIndex = 6
         Me.Button5.Text = "Purchasing"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(307, 453)
+        Me.Button6.Location = New System.Drawing.Point(307, 410)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(215, 46)
+        Me.Button6.Size = New System.Drawing.Size(215, 43)
         Me.Button6.TabIndex = 7
         Me.Button6.Text = "Warehouse Raw Material"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(307, 524)
+        Me.Button7.Location = New System.Drawing.Point(307, 481)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(215, 46)
+        Me.Button7.Size = New System.Drawing.Size(215, 43)
         Me.Button7.TabIndex = 8
         Me.Button7.Text = "QC"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(307, 589)
+        Me.Button8.Location = New System.Drawing.Point(307, 546)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(215, 46)
+        Me.Button8.Size = New System.Drawing.Size(215, 43)
         Me.Button8.TabIndex = 9
         Me.Button8.Text = "Supplier"
         Me.Button8.UseVisualStyleBackColor = True

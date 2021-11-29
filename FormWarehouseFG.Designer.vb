@@ -97,6 +97,7 @@ Partial Class FormWarehouseFG
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -295,7 +296,7 @@ Partial Class FormWarehouseFG
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(485, 150)
+        Me.Button4.Location = New System.Drawing.Point(485, 182)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(77, 24)
         Me.Button4.TabIndex = 11
@@ -305,7 +306,7 @@ Partial Class FormWarehouseFG
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(222, 154)
+        Me.Label12.Location = New System.Drawing.Point(222, 186)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(45, 15)
         Me.Label12.TabIndex = 3
@@ -315,7 +316,7 @@ Partial Class FormWarehouseFG
         '
         Me.DateTimePicker2.CustomFormat = "MM/dd/yyyy"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(279, 151)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(279, 183)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(200, 23)
         Me.DateTimePicker2.TabIndex = 2
@@ -324,7 +325,7 @@ Partial Class FormWarehouseFG
         '
         Me.DateTimePicker1.CustomFormat = "MM/dd/yyyy"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(9, 151)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(9, 183)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
         Me.DateTimePicker1.TabIndex = 1
@@ -340,6 +341,7 @@ Partial Class FormWarehouseFG
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label25)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -360,10 +362,10 @@ Partial Class FormWarehouseFG
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(337, 22)
+        Me.DataGridView1.Location = New System.Drawing.Point(370, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(516, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(483, 150)
         Me.DataGridView1.TabIndex = 3
         '
         'Button3
@@ -828,6 +830,15 @@ Partial Class FormWarehouseFG
         Me.Button5.Text = "LOG OUT"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(323, 88)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(41, 15)
+        Me.Label25.TabIndex = 11
+        Me.Label25.Text = "karton"
+        '
         'FormWarehouseFG
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -936,4 +947,5 @@ Partial Class FormWarehouseFG
     Friend WithEvents TextBox15 As TextBox
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Button13 As Button
+    Friend WithEvents Label25 As Label
 End Class

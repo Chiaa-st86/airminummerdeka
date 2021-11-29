@@ -24,6 +24,9 @@ Partial Class FormMarketing
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Button13 = New System.Windows.Forms.Button()
@@ -48,7 +51,6 @@ Partial Class FormMarketing
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button14 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -59,8 +61,6 @@ Partial Class FormMarketing
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -79,12 +79,15 @@ Partial Class FormMarketing
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1231, 312)
+        Me.TabControl1.Size = New System.Drawing.Size(1231, 336)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.Button14)
+        Me.TabPage1.Controls.Add(Me.TextBox7)
+        Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.TextBox10)
         Me.TabPage1.Controls.Add(Me.Button13)
@@ -112,14 +115,41 @@ Partial Class FormMarketing
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1223, 284)
+        Me.TabPage1.Size = New System.Drawing.Size(1223, 308)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Order Distributor"
+        '
+        'Button14
+        '
+        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button14.Location = New System.Drawing.Point(351, 53)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(27, 23)
+        Me.Button14.TabIndex = 25
+        Me.Button14.Text = "⟳"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(141, 54)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(202, 23)
+        Me.TextBox7.TabIndex = 24
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(18, 54)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 15)
+        Me.Label7.TabIndex = 23
+        Me.Label7.Text = "ID Order FG"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(18, 89)
+        Me.Label11.Location = New System.Drawing.Point(18, 123)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(104, 15)
         Me.Label11.TabIndex = 22
@@ -127,7 +157,7 @@ Partial Class FormMarketing
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(141, 86)
+        Me.TextBox10.Location = New System.Drawing.Point(141, 120)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(217, 23)
         Me.TextBox10.TabIndex = 21
@@ -145,9 +175,9 @@ Partial Class FormMarketing
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(303, 172)
+        Me.Button7.Location = New System.Drawing.Point(303, 206)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(55, 26)
+        Me.Button7.Size = New System.Drawing.Size(55, 27)
         Me.Button7.TabIndex = 19
         Me.Button7.Text = "TOTAL"
         Me.Button7.UseVisualStyleBackColor = True
@@ -155,7 +185,7 @@ Partial Class FormMarketing
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(18, 121)
+        Me.Label6.Location = New System.Drawing.Point(18, 155)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(112, 15)
         Me.Label6.TabIndex = 18
@@ -165,7 +195,7 @@ Partial Class FormMarketing
         '
         Me.DateTimePicker1.CustomFormat = "MM/dd/yyyy"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 115)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 149)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(217, 23)
         Me.DateTimePicker1.TabIndex = 17
@@ -190,34 +220,34 @@ Partial Class FormMarketing
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(387, 173)
+        Me.TextBox5.Location = New System.Drawing.Point(387, 174)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(217, 23)
         Me.TextBox5.TabIndex = 14
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(159, 232)
+        Me.Button3.Location = New System.Drawing.Point(159, 266)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(57, 26)
+        Me.Button3.Size = New System.Drawing.Size(57, 27)
         Me.Button3.TabIndex = 13
         Me.Button3.Text = "DELETE"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(222, 232)
+        Me.Button2.Location = New System.Drawing.Point(222, 266)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 26)
+        Me.Button2.Size = New System.Drawing.Size(75, 27)
         Me.Button2.TabIndex = 12
         Me.Button2.Text = "EDIT DATA"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(303, 232)
+        Me.Button1.Location = New System.Drawing.Point(303, 266)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(55, 26)
+        Me.Button1.Size = New System.Drawing.Size(55, 27)
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "ADD"
         Me.Button1.UseVisualStyleBackColor = True
@@ -225,7 +255,7 @@ Partial Class FormMarketing
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(387, 17)
+        Me.DataGridView1.Location = New System.Drawing.Point(387, 18)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
         Me.DataGridView1.Size = New System.Drawing.Size(820, 150)
@@ -234,7 +264,7 @@ Partial Class FormMarketing
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(18, 206)
+        Me.Label5.Location = New System.Drawing.Point(18, 240)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(126, 15)
         Me.Label5.TabIndex = 9
@@ -243,7 +273,7 @@ Partial Class FormMarketing
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 177)
+        Me.Label4.Location = New System.Drawing.Point(18, 211)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(131, 15)
         Me.Label4.TabIndex = 8
@@ -252,7 +282,7 @@ Partial Class FormMarketing
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 148)
+        Me.Label3.Location = New System.Drawing.Point(18, 182)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 15)
         Me.Label3.TabIndex = 7
@@ -261,7 +291,7 @@ Partial Class FormMarketing
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 57)
+        Me.Label2.Location = New System.Drawing.Point(18, 91)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 15)
         Me.Label2.TabIndex = 6
@@ -272,20 +302,20 @@ Partial Class FormMarketing
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(18, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 15)
+        Me.Label1.Size = New System.Drawing.Size(59, 15)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "ID Pemesanan"
+        Me.Label1.Text = "ID Invoice"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(155, 203)
+        Me.TextBox4.Location = New System.Drawing.Point(155, 237)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(203, 23)
         Me.TextBox4.TabIndex = 4
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(155, 174)
+        Me.TextBox3.Location = New System.Drawing.Point(155, 208)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(142, 23)
         Me.TextBox3.TabIndex = 3
@@ -294,14 +324,14 @@ Partial Class FormMarketing
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"MerdekAir Cup 220ml (karton)", "MerdekAir Botol 600ml (karton)"})
-        Me.ComboBox1.Location = New System.Drawing.Point(141, 145)
+        Me.ComboBox1.Location = New System.Drawing.Point(141, 179)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(217, 23)
         Me.ComboBox1.TabIndex = 2
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(141, 54)
+        Me.TextBox2.Location = New System.Drawing.Point(141, 88)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(217, 23)
         Me.TextBox2.TabIndex = 1
@@ -317,7 +347,6 @@ Partial Class FormMarketing
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage2.Controls.Add(Me.Button14)
         Me.TabPage2.Controls.Add(Me.Button12)
         Me.TabPage2.Controls.Add(Me.Button11)
         Me.TabPage2.Controls.Add(Me.Button10)
@@ -328,27 +357,15 @@ Partial Class FormMarketing
         Me.TabPage2.Controls.Add(Me.TextBox9)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.Label8)
-        Me.TabPage2.Controls.Add(Me.TextBox7)
-        Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Button8)
         Me.TabPage2.Controls.Add(Me.TextBox6)
         Me.TabPage2.Controls.Add(Me.DataGridView2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1223, 284)
+        Me.TabPage2.Size = New System.Drawing.Size(1223, 308)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Order ke FG"
-        '
-        'Button14
-        '
-        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button14.Location = New System.Drawing.Point(327, 14)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(27, 23)
-        Me.Button14.TabIndex = 16
-        Me.Button14.Text = "⟳"
-        Me.Button14.UseVisualStyleBackColor = True
         '
         'Button12
         '
@@ -436,23 +453,6 @@ Partial Class FormMarketing
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "Tanggal Order"
         '
-        'TextBox7
-        '
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(185, 15)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(136, 23)
-        Me.TextBox7.TabIndex = 4
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(5, 18)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(68, 15)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "ID Order FG"
-        '
         'Button8
         '
         Me.Button8.Location = New System.Drawing.Point(614, 162)
@@ -491,7 +491,7 @@ Partial Class FormMarketing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1255, 336)
+        Me.ClientSize = New System.Drawing.Size(1255, 381)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "FormMarketing"
@@ -522,14 +522,12 @@ Partial Class FormMarketing
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button7 As Button
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Label10 As Label
@@ -537,8 +535,6 @@ Partial Class FormMarketing
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Button8 As Button
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents DataGridView2 As DataGridView
@@ -547,7 +543,11 @@ Partial Class FormMarketing
     Friend WithEvents Button10 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button13 As Button
-    Friend WithEvents Button14 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Button14 As Button
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

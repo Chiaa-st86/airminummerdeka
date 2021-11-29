@@ -25,6 +25,8 @@
         randomidFG = rnORDERFG.Next(9999, 99999)
         idorderFGstring = Convert.ToString(ofg & randomidFG & ubahtanggalanjadistring)
         TextBox7.Text = idorderFGstring
+
+        tampilkanData("SELECT * FROM marketing_invoice", DataGridView1)
     End Sub
 
     'log out
@@ -65,7 +67,7 @@
 
     End Sub
     'refresh ID apabila ditemukan duplikat ID
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+    Private Sub Button14_Click(sender As Object, e As EventArgs)
         Dim rnORDERFG As New Random
         Dim tanggalan As DateTime = Now
         Dim formattanggalan As String = "yyyy"
@@ -77,8 +79,22 @@
         idorderFGstring = Convert.ToString(ofg & randomidFG & ubahtanggalanjadistring)
         TextBox7.Text = idorderFGstring
     End Sub
-
+    'input
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If (checkEmpty(TextBox1, TextBox7, TextBox2, TextBox10, TextBox3, TextBox4) = True) And (checkEmpty2(ComboBox1) = True) Then
+            MessageBox.Show("Data masih kosong")
+        Else
+            Dim winny As Boolean = checkDuplicate("marketing_invoice", "noinvoice", TextBox1.Text)
+            If winny = True Then
+                MessageBox.Show("Data jangan duplikat")
+            Else
+                simpanData("marketing_invoice", TextBox1.Text, TextBox7.Text, TextBox2.Text, TextBox10.Text, DateTimePicker1.Text, ComboBox1.Text, TextBox3.Text, TextBox4.Text)
+                tampilkanData("SELECT * FROM marketing_invoice", DataGridView1)
+            End If
+        End If
+    End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        showtoBox(e.RowIndex, DataGridView1,)
     End Sub
 End Class
