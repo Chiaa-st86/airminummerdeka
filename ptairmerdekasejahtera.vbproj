@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ptairmerdekasejahtera</RootNamespace>
+    <StartupObject>ptairmerdekasejahtera.FormPurchasing</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Form1.Designer.vb" />
+    <Compile Remove="Form1.vb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Form1.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
