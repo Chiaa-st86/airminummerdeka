@@ -17,7 +17,6 @@
         tglPO.Enabled = True
         DateTimePicker2.Enabled = True
         cmbTOP.Enabled = True
-        cmbTOP.Items.Clear()
 
     End Sub
 
@@ -36,7 +35,7 @@
     ' cancel
     Private Sub btncancelPO_Click(sender As Object, e As EventArgs) Handles btncancelPO.Click
         clearForm(txtalamat, txtnoPO, txtpemesan, txtsupplier, namaRM, kodeRM, satuan, hargaRM, jlhRM)
-        cmbTOP.Items.Clear()
+
         matiForm(txtalamat, txtnoPO, txtpemesan, txtsupplier, namaRM, kodeRM, satuan, hargaRM, jlhRM)
         tglPO.Enabled = False
         DateTimePicker2.Enabled = False
@@ -65,7 +64,7 @@
                 MessageBox.Show("Data Tersimpan")
                 tampilkanData("SELECT * FROM Purchasing_PO", dgvPO)
                 clearForm(txtalamat, txtnoPO, txtpemesan, txtsupplier, namaRM, kodeRM, satuan, hargaRM, jlhRM)
-                cmbTOP.Items.Clear()
+
             End If
         End If
     End Sub
@@ -77,19 +76,21 @@
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("UPDATE Purchasing_PO SET Tgl_PO ='" & tglPO.Text & "',  Pemasok = '" & txtsupplier.Text & "',Alamat_Kirim = '" & txtalamat.Text & " ', Nama_Pemesan = '" & txtpemesan.Text & "', Tgl_Kirim ='" & DateTimePicker2.Text & "', TOP ='" & cmbTOP.Text & "', Keterangan ='" & RichTextBox1.Text & "',kode_RM = '" & kodeRM.Text & "', nama_RM = '" & namaRM.Text & "', jlh_RM = '" & jlhRM.Text & "', satuan_RM = '" & satuan.Text & "', harga_RM = '" & hargaRM.Text & "' WHERE No_PO ='" & txtnoPO.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("UPDATE Purchasing_PO SET Tgl_PO = '" & tglPO.Text & "',  Pemasok = '" & txtsupplier.Text & "',Alamat_Kirim = '" & txtalamat.Text & " ', Nama_Pemesan = '" & txtpemesan.Text & "', Tgl_Kirim ='" & DateTimePicker2.Text & "', TOP = '" & cmbTOP.Text & "', Keterangan ='" & RichTextBox1.Text & "',kode_RM = '" & kodeRM.Text & "', nama_RM = '" & namaRM.Text & "', jlh_RM = '" & jlhRM.Text & "', satuan_RM = '" & satuan.Text & "', harga_RM = '" & hargaRM.Text & "' WHERE No_PO ='" & txtnoPO.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MessageBox.Show("Yatta! berhasil")
             clearForm(txtalamat, txtnoPO, txtpemesan, txtsupplier, namaRM, kodeRM, satuan, hargaRM, jlhRM)
-            cmbTOP.Items.Clear()
+
         End If
     End Sub
 
+    'cek kebutuhan
     Private Sub btncekkebutuhan_Click(sender As Object, e As EventArgs) Handles btncekkebutuhan.Click
         tampilkanData("SELECT * FROM RM_inputRequirement", dgvReqRM)
     End Sub
 
-    Private Sub dgvPO_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPO.CellContentClick
+    'KLIK DGV
+    Private Sub dgvPO_MouseClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPO.CellClick
         On Error Resume Next
         txtnoPO.Text = dgvPO.Rows(e.RowIndex).Cells(0).Value
         tglPO.Text = dgvPO.Rows(e.RowIndex).Cells(1).Value
@@ -109,5 +110,24 @@
         tglPO.Enabled = True
         DateTimePicker2.Enabled = True
         cmbTOP.Enabled = True
+    End Sub
+
+    Private Sub txtkode_RM_TextChanged(sender As Object, e As EventArgs) Handles kodeRM.TextChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from RM_inventori where kode_RM ='" & kodeRM.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+
+            If DM.HasRows = True Then
+                DM.Read()
+                kodeRM.Text = DM.Item("kode_RM")
+                namaRM.Text = DM.Item("nama_RM")
+                hargaRM.Text = DM.Item("harga_RM")
+                satuan.Text = DM.Item("satuan_RM")
+                jlhRM.Focus()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Data Barang Tidak Terdaftar")
+        End Try
     End Sub
 End Class
