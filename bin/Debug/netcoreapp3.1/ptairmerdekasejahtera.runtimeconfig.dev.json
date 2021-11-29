@@ -1,9 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Awa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Awa\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Bimo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Bimo\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }

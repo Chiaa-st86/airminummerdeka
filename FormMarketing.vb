@@ -92,9 +92,32 @@
                 tampilkanData("SELECT * FROM marketing_invoice", DataGridView1)
             End If
         End If
+
+        Dim rn As New Random
+        Dim dist As String = "DIST"
+        Dim x As Double
+        Dim y As DateTime = Now
+        Dim z As String
+        Dim formatdatetime As String = "yyyyMMdd"
+        Dim id As String
+        z = y.ToString(formatdatetime)
+        x = rn.Next(9999, 99999)
+        id = Convert.ToString(dist & z & x)
+        TextBox1.Text = id
+
+        Dim rnORDERFG As New Random
+        Dim tanggalan As DateTime = Now
+        Dim formattanggalan As String = "yyyy"
+        Dim ofg As String = "OFG"
+        Dim ubahtanggalanjadistring As String
+        ubahtanggalanjadistring = tanggalan.ToString(formattanggalan)
+        Dim randomidFG As Double
+        randomidFG = rnORDERFG.Next(9999, 99999)
+        idorderFGstring = Convert.ToString(ofg & randomidFG & ubahtanggalanjadistring)
+        TextBox7.Text = idorderFGstring
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        showtoBox(e.RowIndex, DataGridView1,)
+    Private Sub DataGridView1_MouseClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

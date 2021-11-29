@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>ptairmerdekasejahtera</RootNamespace>
-    <StartupObject>ptairmerdekasejahtera.FormPurchasing</StartupObject>
+    <StartupObject>ptairmerdekasejahtera.FormMenuUtama</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 

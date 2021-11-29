@@ -47,24 +47,24 @@ Module Koneksi
         Next
     End Sub
 
-    Sub simpanData(namatabel As String, ParamArray var() As TextBox)
-        Dim sql As String = "insert into " + namatabel + " values("
-        For i As Integer = 0 To UBound(var, 1)
-            If i <> UBound(var, 1) Then
-                sql = sql + "'" + var(i).Text + "',"
-            Else
-                sql = sql + "'" + var(i).Text + "')"
-            End If
+    'Sub simpanData(namatabel As String, ParamArray var() As TextBox)
+    'Dim sql As String = "insert into " + namatabel + " values("
+    'For i As Integer = 0 To UBound(var, 1)
+    'If i <> UBound(var, 1) Then
+    '           sql = sql + "'" + var(i).Text + "',"
+    'Else
+    '           sql = sql + "'" + var(i).Text + "')"
+    'End If
+    '
+    'Next
+    '   CMD = New OleDb.OleDbCommand(sql, Conn)
+    '  CMD.ExecuteNonQuery()
+    ' MessageBox.Show("BERHAASIL")
+    'matiForm(var)
+    'clearForm(var)
+    'enableButton()
 
-        Next
-        CMD = New OleDb.OleDbCommand(sql, Conn)
-        CMD.ExecuteNonQuery()
-        'MessageBox.Show("BERHAASIL")
-        matiForm(var)
-        clearForm(var)
-        enableButton()
-
-    End Sub
+    'End Sub
 
     Sub simpanData(namatabel As String, ParamArray var() As String)
         Dim sql As String = "insert into " + namatabel + " values("
@@ -79,10 +79,9 @@ Module Koneksi
         CMD = New OleDb.OleDbCommand(sql, Conn)
         CMD.ExecuteNonQuery()
         MessageBox.Show("save data OKE")
-
         'matiForm(var)
         'clearForm(var)
-        'enableButton()
+        enableButton()
 
     End Sub
     'fungsi untuk menampilkan data, kita cukup masukan query SQL serta DataGridView yang dituju sebagai argumen.
@@ -100,6 +99,20 @@ Module Koneksi
     'ubah MetroTextBox menjadi TextBox jika tidak menggunakan MetroUI
     'Akan menghasilkan True jika ada yang kosong, dan False jika terisi semua
     Function checkEmpty(ParamArray var() As TextBox) As Boolean
+        Dim nomor As Integer = 0
+        For i As Integer = 0 To UBound(var, 1)
+            If (var(i).Text = "") Then
+                nomor += 1
+            End If
+        Next
+        If (nomor > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Function checkEmpty2(ParamArray var() As ComboBox) As Boolean
         Dim nomor As Integer = 0
         For i As Integer = 0 To UBound(var, 1)
             If (var(i).Text = "") Then
@@ -134,7 +147,7 @@ Module Koneksi
     'fungsi untuk edit(update) data yang sudah tersimpan
     Sub updateData(namatabel As String, namaid As String, id As String, ParamArray var() As String)
         Dim sql As String
-        sql = "UPDATE " + namatabel + " SET "
+        sql = "update " + namatabel + " set "
         For i As Integer = 0 To UBound(var, 1) Step 2
             If i <> (UBound(var, 1) - 1) Then
                 sql = sql + var(i) + " ='" + var(i + 1) + "', "
