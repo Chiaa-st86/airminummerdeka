@@ -24,7 +24,6 @@ Partial Class FormMenuUtama
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -53,15 +52,6 @@ Partial Class FormMenuUtama
         Me.Label2.Size = New System.Drawing.Size(190, 22)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "PT. Air Merdeka Sejahtera"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(307, 128)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(215, 46)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Distributor"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -138,7 +128,6 @@ Partial Class FormMenuUtama
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormMenuUtama"
@@ -150,7 +139,6 @@ Partial Class FormMenuUtama
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button

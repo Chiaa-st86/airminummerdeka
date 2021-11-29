@@ -24,6 +24,8 @@ Partial Class FormMarketing
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -63,8 +65,6 @@ Partial Class FormMarketing
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +115,22 @@ Partial Class FormMarketing
         Me.TabPage1.Size = New System.Drawing.Size(1223, 284)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Order Distributor"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(18, 89)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(104, 15)
+        Me.Label11.TabIndex = 22
+        Me.Label11.Text = "Alamat Distributor"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(141, 86)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(217, 23)
+        Me.TextBox10.TabIndex = 21
         '
         'Button13
         '
@@ -320,7 +336,7 @@ Partial Class FormMarketing
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1223, 250)
+        Me.TabPage2.Size = New System.Drawing.Size(1223, 284)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Order ke FG"
         '
@@ -470,22 +486,6 @@ Partial Class FormMarketing
         Me.Button6.TabIndex = 2
         Me.Button6.Text = "LOG OUT"
         Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(18, 89)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(104, 15)
-        Me.Label11.TabIndex = 22
-        Me.Label11.Text = "Alamat Distributor"
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(141, 86)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(217, 23)
-        Me.TextBox10.TabIndex = 21
         '
         'FormMarketing
         '
