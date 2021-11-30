@@ -1,5 +1,6 @@
 Public Class LoginDistributor
-
+    Dim a As New FormMenuUtama
+    Dim b As New Menu_Utama
     ' TODO: Insert code to perform custom authentication using the provided username and password 
     ' (See https://go.microsoft.com/fwlink/?LinkId=35339).  
     ' The custom principal can then be attached to the current thread's principal as follows: 
@@ -9,13 +10,41 @@ Public Class LoginDistributor
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Me.Close()
+        Call koneksiDB()
+        Dim cek As String
+        Dim a As New FormMenuUtama
+
+        cek = "Select * From Karyawan Where Dept = '" & UsernameTextBox.Text & "'and IDkaryawan = '" & PasswordTextBox.Text & "'"
+        'priv = "select * from Karyawan where Dept"
+        'CMD = New OleDb.OleDbCommand("Select * From Pengguna Where Username=
+        '" & txtuser.Text & "' and Password = '" & txtpassword.Text & "'", Conn)
+        'DM = CMD.ExecuteReader
+        'DM.Read()
+        CMD = New OleDb.OleDbCommand(cek, Conn)
+        CMD.ExecuteNonQuery()
+        DM = CMD.ExecuteReader
+        DM.Read()
+        If DM.HasRows = True Then
+            If DM("Dept").ToString = "Admin" Then
+                a.Show()
+                Me.Hide()
+            Else
+                a.Show()
+                a.Button1.Enabled = False
+                Me.Hide()
+            End If
+            PasswordTextBox.Text = ""
+            'UsernameTextBox.Focus()
+        Else
+            MessageBox.Show(" Maaf Username atau Password Anda Salah ")
+            Me.Show()
+        End If
+
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        Dim a = New FormMenuUtama
         Me.Close()
-        a.Show()
+        b.Show()
     End Sub
 
 End Class

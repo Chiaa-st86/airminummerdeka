@@ -21,6 +21,8 @@
         matiForm(txtjlhdefect, txtjlhlayak, txtjlhproduksi, txtkodekontrol, txtkodeproduk, txtnamaSPV, txtnoproduksi)
     End Sub
 
+    'klik datagridview
+
     Dim DGV As DataGridView
     Private Sub DGV_MouseClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         DGV = DataGridView1
@@ -40,6 +42,7 @@
         btninputqc.Enabled = True
         'txtkodekontrol.Enabled = False
     End Sub
+
     'save
     Private Sub btnsaveqc_Click(sender As Object, e As EventArgs) Handles btnsaveqc.Click
         If (checkEmpty(txtjlhdefect, txtjlhlayak, txtjlhproduksi, txtkodekontrol, txtkodeproduk, txtnamaSPV) = True) Then
