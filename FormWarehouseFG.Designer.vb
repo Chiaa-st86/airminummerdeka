@@ -80,7 +80,6 @@ Partial Class FormWarehouseFG
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
@@ -99,6 +98,7 @@ Partial Class FormWarehouseFG
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -624,11 +624,11 @@ Partial Class FormWarehouseFG
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage3.Controls.Add(Me.DateTimePicker4)
         Me.TabPage3.Controls.Add(Me.Button13)
         Me.TabPage3.Controls.Add(Me.Button12)
         Me.TabPage3.Controls.Add(Me.Button11)
         Me.TabPage3.Controls.Add(Me.Button10)
-        Me.TabPage3.Controls.Add(Me.TextBox21)
         Me.TabPage3.Controls.Add(Me.TextBox20)
         Me.TabPage3.Controls.Add(Me.TextBox19)
         Me.TabPage3.Controls.Add(Me.TextBox18)
@@ -687,13 +687,6 @@ Partial Class FormWarehouseFG
         Me.Button10.TabIndex = 28
         Me.Button10.Text = "ADD"
         Me.Button10.UseVisualStyleBackColor = True
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Location = New System.Drawing.Point(171, 204)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(223, 23)
-        Me.TextBox21.TabIndex = 27
         '
         'TextBox20
         '
@@ -801,9 +794,9 @@ Partial Class FormWarehouseFG
         Me.Label21.AutoSize = True
         Me.Label21.Location = New System.Drawing.Point(20, 44)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(82, 15)
+        Me.Label21.Size = New System.Drawing.Size(64, 15)
         Me.Label21.TabIndex = 6
-        Me.Label21.Text = "ID Pemesanan"
+        Me.Label21.Text = "No Invoice"
         '
         'Label18
         '
@@ -849,6 +842,15 @@ Partial Class FormWarehouseFG
         Me.Button5.TabIndex = 1
         Me.Button5.Text = "LOG OUT"
         Me.Button5.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.CustomFormat = "MM/dd/yyyy"
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker4.Location = New System.Drawing.Point(171, 204)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(223, 23)
+        Me.DateTimePicker4.TabIndex = 32
         '
         'FormWarehouseFG
         '
@@ -949,7 +951,6 @@ Partial Class FormWarehouseFG
     Friend WithEvents Button12 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button10 As Button
-    Friend WithEvents TextBox21 As TextBox
     Friend WithEvents TextBox20 As TextBox
     Friend WithEvents TextBox19 As TextBox
     Friend WithEvents TextBox18 As TextBox
@@ -960,4 +961,5 @@ Partial Class FormWarehouseFG
     Friend WithEvents Button13 As Button
     Friend WithEvents Label25 As Label
     Friend WithEvents Button14 As Button
+    Friend WithEvents DateTimePicker4 As DateTimePicker
 End Class

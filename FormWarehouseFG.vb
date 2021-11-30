@@ -31,16 +31,29 @@
             Button1.Enabled = False
         End If
 
-        Dim rnORDERFG As New Random
+        Dim rnORDEROOS As New Random
         Dim tanggalan As DateTime = Now
         Dim formattanggalan As String = "yyyy"
         Dim oos As String = "OOS"
         Dim ubahtanggalanjadistring As String
         ubahtanggalanjadistring = tanggalan.ToString(formattanggalan)
-        Dim randomidFG As Double
-        randomidFG = rnORDERFG.Next(9999, 99999)
-        idorderoosstring = Convert.ToString(oos & randomidFG & ubahtanggalanjadistring)
+        Dim randomidOOS As Double
+        randomidOOS = rnORDEROOS.Next(9999, 99999)
+        idorderOOSstring = Convert.ToString(oos & randomidOOS & ubahtanggalanjadistring)
         TextBox2.Text = idorderOOSstring
+
+
+        Dim rnORDERDO As New Random
+        Dim tanggalanDO As DateTime = Now
+        Dim formattanggalanDO As String = "yyyy"
+        Dim deliveryorder As String = "DO"
+        Dim ubahtanggalanjadistringDO As String
+        ubahtanggalanjadistringDO = tanggalanDO.ToString(formattanggalanDO)
+        Dim randomidDO As Double
+        randomidDO = rnORDERDO.Next(9999, 99999)
+        idDOstring = Convert.ToString(deliveryorder & randomidDO & ubahtanggalanjadistringDO)
+        TextBox14.Text = idDOstring
+
     End Sub
     'INPUT STOK DATA
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -93,6 +106,7 @@
         Else
             If Val(TextBox9.Text) > 0 Or Val(TextBox9.Text) = 0 Then
                 TextBox11.Text = "OK"
+                TextBox12.Text = 0
             End If
         End If
         'botol
@@ -102,12 +116,13 @@
         Else
             If Val(TextBox8.Text) > 0 Or Val(TextBox8.Text) = 0 Then
                 TextBox10.Text = "OK"
+                TextBox13.Text = 0
             End If
         End If
     End Sub
-    'edit data
+    'edit data stok
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If (checkEmpty(TextBox1, TextBox3) = True) And (checkEmpty2(ComboBox1) = True) Then
+        If (checkEmpty(TextBox2, TextBox12, TextBox13) = True) And (checkEmpty2(ComboBox1) = True) Then
             MessageBox.Show("Data masih kosong")
         Else
             updateData("FG_inventori", "kode_FG", TextBox1.Text, "nama_FG", ComboBox1.Text, "jlh_FG", TextBox3.Text)
@@ -115,7 +130,7 @@
         End If
 
     End Sub
-    'delete data
+    'delete data stok
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim cek As Boolean = checkDuplicate("FG_inventori", "kode_FG", TextBox1.Text)
         If TextBox1.Text = "" Or cek = False Then
@@ -124,6 +139,125 @@
             If MessageBox.Show("Apakah anda ingin hapus data ?", "HAPUS DATA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
                 hapusData("FG_inventori", "kode_FG", TextBox1.Text)
                 tampilkanData("SELECT * FROM FG_inventori", DataGridView1)
+            End If
+        End If
+    End Sub
+    'input oos
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If (checkEmpty(TextBox2, TextBox12, TextBox13) = True) Then
+            MessageBox.Show("Data masih kosong")
+        Else
+            Dim winny As Boolean = checkDuplicate("FG_outofstock", "ID_oos", TextBox2.Text)
+            If winny = True Then
+                MessageBox.Show("Data jangan duplikat")
+            Else
+                simpanData("FG_outofstock", TextBox2.Text, DateTimePicker3.Text, TextBox12.Text, TextBox13.Text)
+                tampilkanData("SELECT * FROM FG_outofstock", DataGridView3)
+            End If
+        End If
+
+        Dim rnORDEROOS As New Random
+        Dim tanggalan As DateTime = Now
+        Dim formattanggalan As String = "yyyy"
+        Dim oos As String = "OOS"
+        Dim ubahtanggalanjadistring As String
+        ubahtanggalanjadistring = tanggalan.ToString(formattanggalan)
+        Dim randomidOOS As Double
+        randomidOOS = rnORDEROOS.Next(9999, 99999)
+        idorderOOSstring = Convert.ToString(oos & randomidOOS & ubahtanggalanjadistring)
+        TextBox2.Text = idorderOOSstring
+    End Sub
+    'edit oos
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        If (checkEmpty(TextBox2, TextBox12, TextBox13) = True) Then
+            MessageBox.Show("Data masih kosong")
+        Else
+            updateData("FG_outofstock", "ID_oos", TextBox1.Text, "tgloos", DateTimePicker3.Text, "cup_kurangstok", TextBox12.Text, "botol_kurangstok", TextBox13.Text)
+            tampilkanData("SELECT * FROM FG_outofstock", DataGridView3)
+        End If
+    End Sub
+    'delete oos
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim cek As Boolean = checkDuplicate("FG_outofstock", "ID_oos", TextBox2.Text)
+        If TextBox2.Text = "" Or cek = False Then
+            MessageBox.Show("tidak ada data yang dipilih")
+        Else
+            If MessageBox.Show("Apakah anda ingin hapus data ?", "HAPUS DATA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                hapusData("FG_outofstock", "ID_oos", TextBox2.Text)
+                tampilkanData("SELECT * FROM FG_outofstock", DataGridView3)
+            End If
+        End If
+    End Sub
+    'klik cell
+    Private Sub DataGridView3_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView3.CellClick
+        Try
+            TextBox2.Text = DataGridView3.Rows(e.RowIndex).Cells(0).Value
+            DateTimePicker3.Text = DataGridView3.Rows(e.RowIndex).Cells(1).Value
+            TextBox12.Text = DataGridView3.Rows(e.RowIndex).Cells(2).Value
+            TextBox13.Text = DataGridView3.Rows(e.RowIndex).Cells(3).Value
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+    'Delivery Order
+    'klik cell
+    Private Sub DataGridView4_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView4.CellClick
+        Try
+            TextBox15.Text = DataGridView4.Rows(e.RowIndex).Cells(0).Value
+            TextBox16.Text = DataGridView4.Rows(e.RowIndex).Cells(2).Value
+            TextBox17.Text = DataGridView4.Rows(e.RowIndex).Cells(3).Value
+            TextBox18.Text = DataGridView4.Rows(e.RowIndex).Cells(4).Value
+            TextBox19.Text = DataGridView4.Rows(e.RowIndex).Cells(5).Value
+            TextBox20.Text = DataGridView4.Rows(e.RowIndex).Cells(6).Value
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    'insert DO
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        If (checkEmpty(TextBox14, TextBox15, TextBox16, TextBox17, TextBox18, TextBox19, TextBox20) = True) Then
+            MessageBox.Show("Data masih kosong")
+        Else
+            Dim winny As Boolean = checkDuplicate("FG_pengiriman", "IDkirimFG", TextBox14.Text)
+            If winny = True Then
+                MessageBox.Show("Data jangan duplikat")
+            Else
+                simpanData("FG_pengiriman", TextBox14.Text, TextBox15.Text, TextBox16.Text, TextBox17.Text, DateTimePicker4.Text)
+                tampilkanData("SELECT * FROM FG_pengiriman", DataGridView5)
+            End If
+        End If
+
+        Dim rnORDERDO As New Random
+        Dim tanggalanDO As DateTime = Now
+        Dim formattanggalanDO As String = "yyyy"
+        Dim deliveryorder As String = "DO"
+        Dim ubahtanggalanjadistringDO As String
+        ubahtanggalanjadistringDO = tanggalanDO.ToString(formattanggalanDO)
+        Dim randomidDO As Double
+        randomidDO = rnORDERDO.Next(9999, 99999)
+        idDOstring = Convert.ToString(deliveryorder & randomidDO & ubahtanggalanjadistringDO)
+        TextBox14.Text = idDOstring
+    End Sub
+    'edit DO
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        If (checkEmpty(TextBox14, TextBox15, TextBox16, TextBox17, TextBox18, TextBox19, TextBox20) = True) Then
+            MessageBox.Show("Data masih kosong")
+        Else
+            updateData("FG_pengiriman", "IDkirimFG", TextBox14.Text, "noinvoice", TextBox15.Text, "namapelanggan", TextBox16.Text, "alamatpelanggan", TextBox17.Text, "tglkirim", DateTimePicker4.Text)
+            tampilkanData("SELECT * FROM FG_pengiriman", DataGridView5)
+        End If
+    End Sub
+    'Delete DO
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Dim cek As Boolean = checkDuplicate("FG_pengiriman", "IDkirimFG", TextBox2.Text)
+        If TextBox2.Text = "" Or cek = False Then
+            MessageBox.Show("tidak ada data yang dipilih")
+        Else
+            If MessageBox.Show("Apakah anda ingin hapus data ?", "HAPUS DATA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                hapusData("FG_pengiriman", "IDkirimFG", TextBox2.Text)
+                tampilkanData("SELECT * FROM FG_pengiriman", DataGridView5)
             End If
         End If
     End Sub
