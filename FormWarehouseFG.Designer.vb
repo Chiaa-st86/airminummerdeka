@@ -47,6 +47,7 @@ Partial Class FormWarehouseFG
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -97,7 +98,7 @@ Partial Class FormWarehouseFG
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -127,6 +128,7 @@ Partial Class FormWarehouseFG
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.Button14)
         Me.TabPage1.Controls.Add(Me.TextBox10)
         Me.TabPage1.Controls.Add(Me.TextBox11)
         Me.TabPage1.Controls.Add(Me.Label10)
@@ -358,6 +360,15 @@ Partial Class FormWarehouseFG
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Stok Produk"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(323, 88)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(41, 15)
+        Me.Label25.TabIndex = 11
+        Me.Label25.Text = "karton"
         '
         'DataGridView1
         '
@@ -830,14 +841,14 @@ Partial Class FormWarehouseFG
         Me.Button5.Text = "LOG OUT"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Label25
+        'Button14
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(323, 88)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(41, 15)
-        Me.Label25.TabIndex = 11
-        Me.Label25.Text = "karton"
+        Me.Button14.Location = New System.Drawing.Point(582, 321)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(100, 23)
+        Me.Button14.TabIndex = 29
+        Me.Button14.Text = "HITUNG"
+        Me.Button14.UseVisualStyleBackColor = True
         '
         'FormWarehouseFG
         '
@@ -948,4 +959,5 @@ Partial Class FormWarehouseFG
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Button13 As Button
     Friend WithEvents Label25 As Label
+    Friend WithEvents Button14 As Button
 End Class
