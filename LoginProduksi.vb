@@ -9,7 +9,9 @@ Public Class LoginProduksi
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+        Dim b = New FormProduksi
         Me.Close()
+        b.Show()
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click

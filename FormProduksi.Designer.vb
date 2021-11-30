@@ -23,6 +23,14 @@ Partial Class FormProduksi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
@@ -93,15 +101,11 @@ Partial Class FormProduksi
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,10 +119,6 @@ Partial Class FormProduksi
         Me.TabPage3.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox7.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -131,6 +131,82 @@ Partial Class FormProduksi
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(998, 807)
         Me.TabControl1.TabIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.GroupBox6)
+        Me.TabPage1.Controls.Add(Me.GroupBox7)
+        Me.TabPage1.Controls.Add(Me.DataGridView1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(990, 779)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "List Out Of Stock"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.TextBox13)
+        Me.GroupBox6.Controls.Add(Me.Label18)
+        Me.GroupBox6.Location = New System.Drawing.Point(61, 523)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(853, 72)
+        Me.GroupBox6.TabIndex = 6
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "MerdekAir Botol 600ml (karton)"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(149, 30)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(694, 23)
+        Me.TextBox13.TabIndex = 7
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(6, 33)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(137, 15)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Jumlah Kekurangan Stok"
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.TextBox14)
+        Me.GroupBox7.Controls.Add(Me.Label19)
+        Me.GroupBox7.Location = New System.Drawing.Point(61, 448)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(853, 69)
+        Me.GroupBox7.TabIndex = 5
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "MerdekAir Cup 220ml (karton)"
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(149, 29)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(694, 23)
+        Me.TextBox14.TabIndex = 6
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(6, 32)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(137, 15)
+        Me.Label19.TabIndex = 2
+        Me.Label19.Text = "Jumlah Kekurangan Stok"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 6)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(978, 394)
+        Me.DataGridView1.TabIndex = 0
         '
         'TabPage2
         '
@@ -798,82 +874,6 @@ Partial Class FormProduksi
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Kode Order RM"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 6)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(978, 394)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.TextBox14)
-        Me.GroupBox7.Controls.Add(Me.Label19)
-        Me.GroupBox7.Location = New System.Drawing.Point(61, 448)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(853, 69)
-        Me.GroupBox7.TabIndex = 5
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "MerdekAir Cup 220ml (karton)"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(6, 32)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(137, 15)
-        Me.Label19.TabIndex = 2
-        Me.Label19.Text = "Jumlah Kekurangan Stok"
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(149, 29)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(694, 23)
-        Me.TextBox14.TabIndex = 6
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.Controls.Add(Me.TextBox13)
-        Me.GroupBox6.Controls.Add(Me.Label18)
-        Me.GroupBox6.Location = New System.Drawing.Point(61, 523)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(853, 72)
-        Me.GroupBox6.TabIndex = 6
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "MerdekAir Botol 600ml (karton)"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(6, 33)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(137, 15)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = "Jumlah Kekurangan Stok"
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(149, 30)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(694, 23)
-        Me.TextBox13.TabIndex = 7
-        '
-        'TabPage1
-        '
-        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage1.Controls.Add(Me.GroupBox6)
-        Me.TabPage1.Controls.Add(Me.GroupBox7)
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(990, 779)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "List Out Of Stock"
-        '
         'FormProduksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -883,6 +883,12 @@ Partial Class FormProduksi
         Me.Name = "FormProduksi"
         Me.Text = "FormProduksi"
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
@@ -903,12 +909,6 @@ Partial Class FormProduksi
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        Me.TabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

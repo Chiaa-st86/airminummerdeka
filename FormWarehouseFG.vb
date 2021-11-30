@@ -215,6 +215,19 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    'kilk cell dari data DO
+    Private Sub DataGridView5_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView5.CellClick
+        Try
+            TextBox14.Text = DataGridView5.Rows(e.RowIndex).Cells(0).Value
+            TextBox15.Text = DataGridView5.Rows(e.RowIndex).Cells(1).Value
+            TextBox16.Text = DataGridView5.Rows(e.RowIndex).Cells(2).Value
+            TextBox17.Text = DataGridView5.Rows(e.RowIndex).Cells(3).Value
+            DateTimePicker4.Text = DataGridView5.Rows(e.RowIndex).Cells(4).Value
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
     'insert DO
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         If (checkEmpty(TextBox14, TextBox15, TextBox16, TextBox17, TextBox18, TextBox19, TextBox20) = True) Then
@@ -251,12 +264,12 @@
     End Sub
     'Delete DO
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Dim cek As Boolean = checkDuplicate("FG_pengiriman", "IDkirimFG", TextBox2.Text)
-        If TextBox2.Text = "" Or cek = False Then
+        Dim cek As Boolean = checkDuplicate("FG_pengiriman", "IDkirimFG", TextBox14.Text)
+        If TextBox14.Text = "" Or cek = False Then
             MessageBox.Show("tidak ada data yang dipilih")
         Else
             If MessageBox.Show("Apakah anda ingin hapus data ?", "HAPUS DATA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                hapusData("FG_pengiriman", "IDkirimFG", TextBox2.Text)
+                hapusData("FG_pengiriman", "IDkirimFG", TextBox14.Text)
                 tampilkanData("SELECT * FROM FG_pengiriman", DataGridView5)
             End If
         End If
