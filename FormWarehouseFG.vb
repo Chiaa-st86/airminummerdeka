@@ -1,4 +1,6 @@
 ﻿Public Class FormWarehouseFG
+    Friend idorderOOSstring As String
+    Friend idDOstring As String
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         If ComboBox1.SelectedItem.ToString = "MerdekAir Cup 220ml (karton)" Then
             TextBox1.Text = "FG287634"
@@ -22,9 +24,20 @@
     Private Sub FormWarehouseFG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tampilkanData("SELECT * FROM marketing_inputOrder", DataGridView2)
         tampilkanData("SELECT * FROM FG_inventori", DataGridView1)
-        If DataGridView1.Columns.Contains("FG287634") And DataGridView1.Columns.Contains("FG431289") Then
+        If DataGridView1.Columns.Contains("FG287634") = True And DataGridView1.Columns.Contains("FG431289") = True Then
             Button1.Enabled = False
         End If
+
+        Dim rnORDERFG As New Random
+        Dim tanggalan As DateTime = Now
+        Dim formattanggalan As String = "yyyy"
+        Dim oos As String = "OOS"
+        Dim ubahtanggalanjadistring As String
+        ubahtanggalanjadistring = tanggalan.ToString(formattanggalan)
+        Dim randomidFG As Double
+        randomidFG = rnORDERFG.Next(9999, 99999)
+        idorderoosstring = Convert.ToString(oos & randomidFG & ubahtanggalanjadistring)
+        TextBox2.Text = idorderOOSstring
     End Sub
     'INPUT STOK DATA
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -66,22 +79,48 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
+    'HITUNG OOS
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
         TextBox9.Text = Val(TextBox4.Text) - Val(TextBox7.Text)
         TextBox8.Text = Val(TextBox5.Text) - Val(TextBox6.Text)
+        'cup
         If Val(TextBox9.Text) < 0 Then
             TextBox11.Text = "OUT OF STOCK"
+            TextBox12.Text = Math.Abs(Val(TextBox9.Text))
         Else
             If Val(TextBox9.Text) > 0 Or Val(TextBox9.Text) = 0 Then
                 TextBox11.Text = "OK"
             End If
         End If
+        'botol
         If Val(TextBox8.Text) < 0 Then
             TextBox10.Text = "OUT OF STOCK"
+            TextBox13.Text = Math.Abs(Val(TextBox9.Text))
         Else
             If Val(TextBox8.Text) > 0 Or Val(TextBox8.Text) = 0 Then
                 TextBox10.Text = "OK"
+            End If
+        End If
+    End Sub
+    'edit data
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If (checkEmpty(TextBox1, TextBox3) = True) And (checkEmpty2(ComboBox1) = True) Then
+            MessageBox.Show("Data masih kosong")
+        Else
+            updateData("FG_inventori", "kode_FG", TextBox1.Text, "nama_FG", ComboBox1.Text, "jlh_FG", TextBox3.Text)
+            tampilkanData("SELECT * FROM FG_inventori", DataGridView1)
+        End If
+
+    End Sub
+    'delete data
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim cek As Boolean = checkDuplicate("FG_inventori", "kode_FG", TextBox1.Text)
+        If TextBox1.Text = "" Or cek = False Then
+            MessageBox.Show("tidak ada data yang dipilih")
+        Else
+            If MessageBox.Show("Apakah anda ingin hapus data ?", "HAPUS DATA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                hapusData("FG_inventori", "kode_FG", TextBox1.Text)
+                tampilkanData("SELECT * FROM FG_inventori", DataGridView1)
             End If
         End If
     End Sub

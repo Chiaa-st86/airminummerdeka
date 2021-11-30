@@ -24,6 +24,7 @@ Partial Class FormWarehouseFG
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -98,7 +99,6 @@ Partial Class FormWarehouseFG
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -153,6 +153,15 @@ Partial Class FormWarehouseFG
         Me.TabPage1.Size = New System.Drawing.Size(875, 571)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Stok dan Pesanan Produk"
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(582, 321)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(100, 23)
+        Me.Button14.TabIndex = 29
+        Me.Button14.Text = "HITUNG"
+        Me.Button14.UseVisualStyleBackColor = True
         '
         'TextBox10
         '
@@ -840,15 +849,6 @@ Partial Class FormWarehouseFG
         Me.Button5.TabIndex = 1
         Me.Button5.Text = "LOG OUT"
         Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(582, 321)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(100, 23)
-        Me.Button14.TabIndex = 29
-        Me.Button14.Text = "HITUNG"
-        Me.Button14.UseVisualStyleBackColor = True
         '
         'FormWarehouseFG
         '
