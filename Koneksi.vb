@@ -125,6 +125,19 @@ Module Koneksi
             Return False
         End If
     End Function
+    Function checkEmpty3(ParamArray var() As DateTimePicker) As Boolean
+        Dim nomor As Integer = 0
+        For i As Integer = 0 To UBound(var, 1)
+            If (var(i).Text = "") Then
+                nomor += 1
+            End If
+        Next
+        If (nomor > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
     'fungsi untuk cek duplikat d database
     Function checkDuplicate(namatabel As String, namaid As String, idkonten As String)
@@ -178,7 +191,7 @@ Module Koneksi
         Next
     End Sub
 
-    Sub showtoBox(row As Integer, DGV As DataGridView, ParamArray var() As TextBox)
+    Sub showtoBox2(row As Integer, DGV As DataGridView, ParamArray var() As TextBox)
         On Error Resume Next
         For i As Integer = 0 To UBound(var, 1)
             var(i).Text = DGV.Rows(row).Cells(i).Value
