@@ -24,6 +24,9 @@
     Private Sub FormWarehouseFG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tampilkanData("SELECT * FROM marketing_inputOrder", DataGridView2)
         tampilkanData("SELECT * FROM FG_inventori", DataGridView1)
+        tampilkanData("SELECT * FROM FG_outofstock", DataGridView3)
+        tampilkanData("SELECT * FROM marketing_invoice", DataGridView4)
+        tampilkanData("SELECT * FROM FG_pengiriman", DataGridView5)
         If DataGridView1.Columns.Contains("FG287634") = True And DataGridView1.Columns.Contains("FG431289") = True Then
             Button1.Enabled = False
         End If
