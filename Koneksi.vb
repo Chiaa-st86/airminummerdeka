@@ -9,7 +9,7 @@ Module Koneksi
         Try
             Conn = New OleDbConnection("provider=microsoft.ace.oledb.12.0; data source =Air Minum 1.accdb")
             Conn.Open()
-            MessageBox.Show("Koneksi OKE")
+            'MessageBox.Show("Koneksi OKE")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -212,5 +212,27 @@ Module Koneksi
         CMD = New OleDb.OleDbCommand(sql, Conn)
         DM = CMD.ExecuteReader
         MessageBox.Show("Data terhapus.")
+    End Sub
+
+    'pilih produk buat di warehouse FG
+    Public Sub reload(ByVal sql As String, ByVal DTG As Object)
+        Try
+            Conn.Open()
+            Dim dt = New DataTable
+            With CMD
+                .Connection = Conn
+                .CommandText = sql
+
+            End With
+            DA.SelectCommand = CMD
+            DA.Fill(dt)
+            DTG.datasource = dt
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            Conn.Close()
+            DA.Dispose()
+        End Try
     End Sub
 End Module

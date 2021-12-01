@@ -76,6 +76,7 @@ Partial Class FormWarehouseFG
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
@@ -98,7 +99,6 @@ Partial Class FormWarehouseFG
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -445,7 +445,6 @@ Partial Class FormWarehouseFG
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"MerdekAir Cup 220ml (karton)", "MerdekAir Botol 600ml (karton)"})
         Me.ComboBox1.Location = New System.Drawing.Point(108, 51)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(209, 23)
@@ -652,6 +651,15 @@ Partial Class FormWarehouseFG
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Delivery Order"
         '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.CustomFormat = "MM/dd/yyyy"
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker4.Location = New System.Drawing.Point(171, 204)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(223, 23)
+        Me.DateTimePicker4.TabIndex = 32
+        '
         'Button13
         '
         Me.Button13.Location = New System.Drawing.Point(787, 523)
@@ -842,15 +850,6 @@ Partial Class FormWarehouseFG
         Me.Button5.TabIndex = 1
         Me.Button5.Text = "LOG OUT"
         Me.Button5.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.CustomFormat = "MM/dd/yyyy"
-        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker4.Location = New System.Drawing.Point(171, 204)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(223, 23)
-        Me.DateTimePicker4.TabIndex = 32
         '
         'FormWarehouseFG
         '

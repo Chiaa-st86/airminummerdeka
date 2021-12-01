@@ -1,12 +1,26 @@
-﻿Public Class FormWarehouseFG
+﻿Imports System.Data.OleDb
+Public Class FormWarehouseFG
     Friend idorderOOSstring As String
     Friend idDOstring As String
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        If ComboBox1.SelectedItem.ToString = "MerdekAir Cup 220ml (karton)" Then
-            TextBox1.Text = "FG287634"
-        ElseIf ComboBox1.SelectedItem.ToString = "MerdekAir Botol 600ml (karton)" Then
-            TextBox1.Text = "FG431289"
-        End If
+        'id produk otomatis saat user memilih produk jd gaperlu isi2 lagi yey :3
+        Dim sql As String
+        Dim cmd = New OleDbCommand
+        Dim dt = New DataTable
+        Dim da = New OleDbDataAdapter
+        Try
+            sql = "SELECT * FROM data_produk WHERE nama_produk = '" & ComboBox1.Text & "'"
+            cmd.Connection = Conn
+            cmd.CommandText = sql
+            da.SelectCommand = cmd
+            da.Fill(dt)
+
+            If dt.Rows.Count > 0 Then
+                TextBox1.Text = dt.Rows(0).Item("id_produk").ToString
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     'logout
@@ -19,7 +33,14 @@
         ElseIf result = DialogResult.No Then
         End If
     End Sub
-
+    Sub produk()
+        Dim cmd = New OleDbCommand("SELECT * FROM data_produk", Conn)
+        Dim rd = cmd.executereader
+        ComboBox1.Items.Clear()
+        Do While rd.read = True
+            ComboBox1.Items.Add(rd.item("nama_produk"))
+        Loop
+    End Sub
     'load
     Private Sub FormWarehouseFG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tampilkanData("SELECT * FROM marketing_inputOrder", DataGridView2)
@@ -27,9 +48,7 @@
         tampilkanData("SELECT * FROM FG_outofstock", DataGridView3)
         tampilkanData("SELECT * FROM marketing_invoice", DataGridView4)
         tampilkanData("SELECT * FROM FG_pengiriman", DataGridView5)
-        If DataGridView1.Columns.Contains("FG287634") = True And DataGridView1.Columns.Contains("FG431289") = True Then
-            Button1.Enabled = False
-        End If
+        Call produk()
 
         Dim rnORDEROOS As New Random
         Dim tanggalan As DateTime = Now
