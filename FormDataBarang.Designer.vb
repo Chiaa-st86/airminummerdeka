@@ -30,6 +30,8 @@ Partial Class FormDataBarang
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,27 +46,27 @@ Partial Class FormDataBarang
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(325, 88)
+        Me.Button1.Location = New System.Drawing.Point(325, 127)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(75, 29)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "ADD"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(244, 88)
+        Me.Button2.Location = New System.Drawing.Point(244, 127)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(75, 29)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "EDIT DATA"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(163, 88)
+        Me.Button3.Location = New System.Drawing.Point(163, 127)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(75, 29)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "DELETE"
         Me.Button3.UseVisualStyleBackColor = True
@@ -101,11 +103,29 @@ Partial Class FormDataBarang
         Me.TextBox2.Size = New System.Drawing.Size(300, 23)
         Me.TextBox2.TabIndex = 7
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(99, 91)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(300, 23)
+        Me.TextBox3.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(13, 94)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(80, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Harga Produk"
+        '
         'FormDataBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1032, 345)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
@@ -130,4 +150,6 @@ Partial Class FormDataBarang
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label3 As Label
 End Class
