@@ -185,7 +185,7 @@ Public Class FormWarehouseFG
             MessageBox.Show("tidak ada data yang dipilih")
         Else
             If MessageBox.Show("Apakah anda ingin hapus data ?", "HAPUS DATA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                hapusData("FG_inventori", "kode_FG", TextBox1.Text)
+                hapusData("FG_inventori", "kode_FG", TextBox4.Text)
                 tampilkanData("SELECT * FROM FG_inventori", DataGridView1)
 
                 Button1.Enabled = True

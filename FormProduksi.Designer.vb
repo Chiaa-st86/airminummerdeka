@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormProduksi
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,12 @@ Partial Class FormProduksi
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button21 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -36,9 +37,9 @@ Partial Class FormProduksi
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
@@ -55,7 +56,13 @@ Partial Class FormProduksi
         Me.Label30 = New System.Windows.Forms.Label()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
         Me.Button17 = New System.Windows.Forms.Button()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -72,7 +79,9 @@ Partial Class FormProduksi
         Me.Button11 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Button19 = New System.Windows.Forms.Button()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -80,7 +89,6 @@ Partial Class FormProduksi
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -94,15 +102,22 @@ Partial Class FormProduksi
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -122,6 +137,7 @@ Partial Class FormProduksi
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox6.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -135,7 +151,7 @@ Partial Class FormProduksi
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(927, 12)
+        Me.Button9.Location = New System.Drawing.Point(915, 5)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(65, 25)
         Me.Button9.TabIndex = 2
@@ -151,12 +167,13 @@ Partial Class FormProduksi
         Me.TabPage3.Controls.Add(Me.GroupBox2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(979, 663)
+        Me.TabPage3.Size = New System.Drawing.Size(979, 689)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Data Kebutuhan Raw Material"
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Button21)
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.TextBox4)
         Me.GroupBox3.Controls.Add(Me.TextBox3)
@@ -166,12 +183,21 @@ Partial Class FormProduksi
         Me.GroupBox3.Controls.Add(Me.TextBox1)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.DataGridView2)
-        Me.GroupBox3.Location = New System.Drawing.Point(5, 11)
+        Me.GroupBox3.Location = New System.Drawing.Point(5, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(966, 149)
+        Me.GroupBox3.Size = New System.Drawing.Size(966, 157)
         Me.GroupBox3.TabIndex = 25
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Raw Material (Data Dept Warehouse RM)"
+        '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(194, 132)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(75, 23)
+        Me.Button21.TabIndex = 49
+        Me.Button21.Text = "EDIT DATA"
+        Me.Button21.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -185,15 +211,14 @@ Partial Class FormProduksi
         'TextBox4
         '
         Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(130, 109)
+        Me.TextBox4.Location = New System.Drawing.Point(130, 105)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(140, 23)
         Me.TextBox4.TabIndex = 41
         '
         'TextBox3
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(130, 80)
+        Me.TextBox3.Location = New System.Drawing.Point(130, 76)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(140, 23)
         Me.TextBox3.TabIndex = 39
@@ -210,7 +235,7 @@ Partial Class FormProduksi
         'TextBox2
         '
         Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(130, 51)
+        Me.TextBox2.Location = New System.Drawing.Point(130, 47)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(140, 23)
         Me.TextBox2.TabIndex = 37
@@ -227,7 +252,7 @@ Partial Class FormProduksi
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(130, 22)
+        Me.TextBox1.Location = New System.Drawing.Point(130, 18)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(140, 23)
         Me.TextBox1.TabIndex = 35
@@ -244,26 +269,26 @@ Partial Class FormProduksi
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(276, 21)
+        Me.DataGridView2.Location = New System.Drawing.Point(313, 21)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 25
-        Me.DataGridView2.Size = New System.Drawing.Size(680, 111)
+        Me.DataGridView2.Size = New System.Drawing.Size(643, 107)
         Me.DataGridView2.TabIndex = 10
         '
         'DataGridView6
         '
         Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView6.Location = New System.Drawing.Point(461, 449)
+        Me.DataGridView6.Location = New System.Drawing.Point(461, 468)
         Me.DataGridView6.Name = "DataGridView6"
         Me.DataGridView6.RowTemplate.Height = 25
-        Me.DataGridView6.Size = New System.Drawing.Size(502, 187)
+        Me.DataGridView6.Size = New System.Drawing.Size(502, 172)
         Me.DataGridView6.TabIndex = 2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.TextBox17)
         Me.GroupBox1.Controls.Add(Me.Label31)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
         Me.GroupBox1.Controls.Add(Me.Label23)
         Me.GroupBox1.Controls.Add(Me.Button16)
         Me.GroupBox1.Controls.Add(Me.DataGridView5)
@@ -280,12 +305,22 @@ Partial Class FormProduksi
         Me.GroupBox1.Controls.Add(Me.Label30)
         Me.GroupBox1.Controls.Add(Me.TextBox22)
         Me.GroupBox1.Controls.Add(Me.Label29)
+        Me.GroupBox1.Controls.Add(Me.GroupBox6)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 166)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(966, 263)
         Me.GroupBox1.TabIndex = 42
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data RM Tiap Produk / Spesifikasi Produk"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(320, 220)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(192, 15)
+        Me.Label7.TabIndex = 46
+        Me.Label7.Text = "Selisih Stok RM dengan RM Produk"
         '
         'TextBox17
         '
@@ -303,18 +338,10 @@ Partial Class FormProduksi
         Me.Label31.TabIndex = 44
         Me.Label31.Text = "Satuan RM"
         '
-        'TextBox8
-        '
-        Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(141, 228)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(128, 23)
-        Me.TextBox8.TabIndex = 43
-        '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(7, 230)
+        Me.Label23.Location = New System.Drawing.Point(652, 220)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(83, 15)
         Me.Label23.TabIndex = 42
@@ -449,8 +476,49 @@ Partial Class FormProduksi
         Me.Label29.TabIndex = 34
         Me.Label29.Text = "Nama RM"
         '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Button18)
+        Me.GroupBox6.Controls.Add(Me.TextBox19)
+        Me.GroupBox6.Controls.Add(Me.TextBox8)
+        Me.GroupBox6.Location = New System.Drawing.Point(313, 188)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(643, 69)
+        Me.GroupBox6.TabIndex = 48
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Stok RM"
+        '
+        'Button18
+        '
+        Me.Button18.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button18.Location = New System.Drawing.Point(572, 17)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(56, 46)
+        Me.Button18.TabIndex = 49
+        Me.Button18.Text = "↵"
+        Me.Button18.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Enabled = False
+        Me.TextBox19.Location = New System.Drawing.Point(205, 29)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(128, 23)
+        Me.TextBox19.TabIndex = 47
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(428, 30)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(128, 23)
+        Me.TextBox8.TabIndex = 43
+        '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label32)
+        Me.GroupBox2.Controls.Add(Me.TextBox25)
         Me.GroupBox2.Controls.Add(Me.Button17)
         Me.GroupBox2.Controls.Add(Me.ComboBox3)
         Me.GroupBox2.Controls.Add(Me.Label8)
@@ -465,17 +533,33 @@ Partial Class FormProduksi
         Me.GroupBox2.Controls.Add(Me.TextBox18)
         Me.GroupBox2.Controls.Add(Me.Button10)
         Me.GroupBox2.Controls.Add(Me.Button11)
-        Me.GroupBox2.Location = New System.Drawing.Point(5, 435)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 440)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(967, 206)
+        Me.GroupBox2.Size = New System.Drawing.Size(967, 243)
         Me.GroupBox2.TabIndex = 44
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Order RM"
         '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(10, 185)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(64, 15)
+        Me.Label32.TabIndex = 44
+        Me.Label32.Text = "Satuan RM"
+        '
+        'TextBox25
+        '
+        Me.TextBox25.Location = New System.Drawing.Point(213, 177)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(192, 23)
+        Me.TextBox25.TabIndex = 45
+        '
         'Button17
         '
         Me.Button17.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button17.Location = New System.Drawing.Point(411, 102)
+        Me.Button17.Location = New System.Drawing.Point(412, 116)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(32, 25)
         Me.Button17.TabIndex = 42
@@ -486,7 +570,7 @@ Partial Class FormProduksi
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(213, 105)
+        Me.ComboBox3.Location = New System.Drawing.Point(214, 119)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(192, 23)
         Me.ComboBox3.TabIndex = 43
@@ -494,7 +578,7 @@ Partial Class FormProduksi
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 22)
+        Me.Label8.Location = New System.Drawing.Point(7, 36)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(88, 15)
         Me.Label8.TabIndex = 0
@@ -503,7 +587,7 @@ Partial Class FormProduksi
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(9, 84)
+        Me.Label22.Location = New System.Drawing.Point(10, 98)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(80, 15)
         Me.Label22.TabIndex = 8
@@ -512,7 +596,7 @@ Partial Class FormProduksi
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(7, 51)
+        Me.Label9.Location = New System.Drawing.Point(8, 65)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(48, 15)
         Me.Label9.TabIndex = 1
@@ -522,7 +606,7 @@ Partial Class FormProduksi
         '
         Me.DateTimePicker7.CustomFormat = "MM/dd/yyyy"
         Me.DateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker7.Location = New System.Drawing.Point(213, 46)
+        Me.DateTimePicker7.Location = New System.Drawing.Point(214, 60)
         Me.DateTimePicker7.Name = "DateTimePicker7"
         Me.DateTimePicker7.Size = New System.Drawing.Size(192, 23)
         Me.DateTimePicker7.TabIndex = 21
@@ -530,7 +614,7 @@ Partial Class FormProduksi
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(7, 142)
+        Me.Label25.Location = New System.Drawing.Point(8, 156)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(99, 15)
         Me.Label25.TabIndex = 1
@@ -539,7 +623,7 @@ Partial Class FormProduksi
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(6, 113)
+        Me.Label26.Location = New System.Drawing.Point(7, 127)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(193, 15)
         Me.Label26.TabIndex = 0
@@ -547,21 +631,21 @@ Partial Class FormProduksi
         '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(213, 76)
+        Me.TextBox15.Location = New System.Drawing.Point(214, 90)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(192, 23)
         Me.TextBox15.TabIndex = 9
         '
         'TextBox20
         '
-        Me.TextBox20.Location = New System.Drawing.Point(213, 13)
+        Me.TextBox20.Location = New System.Drawing.Point(214, 27)
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(192, 23)
         Me.TextBox20.TabIndex = 10
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(330, 163)
+        Me.Button12.Location = New System.Drawing.Point(357, 206)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(75, 23)
         Me.Button12.TabIndex = 22
@@ -570,14 +654,14 @@ Partial Class FormProduksi
         '
         'TextBox18
         '
-        Me.TextBox18.Location = New System.Drawing.Point(213, 134)
+        Me.TextBox18.Location = New System.Drawing.Point(214, 148)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(192, 23)
         Me.TextBox18.TabIndex = 5
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(168, 163)
+        Me.Button10.Location = New System.Drawing.Point(195, 206)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(75, 23)
         Me.Button10.TabIndex = 24
@@ -586,7 +670,7 @@ Partial Class FormProduksi
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(249, 163)
+        Me.Button11.Location = New System.Drawing.Point(276, 206)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(75, 23)
         Me.Button11.TabIndex = 23
@@ -601,13 +685,15 @@ Partial Class FormProduksi
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(979, 663)
+        Me.TabPage2.Size = New System.Drawing.Size(979, 689)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Jadwal dan Hasil Produksi"
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.DateTimePicker4)
+        Me.GroupBox5.Controls.Add(Me.TextBox26)
+        Me.GroupBox5.Controls.Add(Me.Label33)
+        Me.GroupBox5.Controls.Add(Me.Button19)
         Me.GroupBox5.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox5.Controls.Add(Me.TextBox11)
         Me.GroupBox5.Controls.Add(Me.ComboBox1)
@@ -615,7 +701,6 @@ Partial Class FormProduksi
         Me.GroupBox5.Controls.Add(Me.TextBox10)
         Me.GroupBox5.Controls.Add(Me.TextBox9)
         Me.GroupBox5.Controls.Add(Me.Label17)
-        Me.GroupBox5.Controls.Add(Me.Label16)
         Me.GroupBox5.Controls.Add(Me.Label15)
         Me.GroupBox5.Controls.Add(Me.Label14)
         Me.GroupBox5.Controls.Add(Me.Label13)
@@ -630,32 +715,50 @@ Partial Class FormProduksi
         Me.GroupBox5.Controls.Add(Me.Button8)
         Me.GroupBox5.Location = New System.Drawing.Point(3, 15)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(970, 273)
+        Me.GroupBox5.Size = New System.Drawing.Size(970, 327)
         Me.GroupBox5.TabIndex = 20
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Jadwal Produksi"
         '
-        'DateTimePicker4
+        'TextBox26
         '
-        Me.DateTimePicker4.CustomFormat = "MM/dd/yyyy"
-        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker4.Location = New System.Drawing.Point(130, 214)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(140, 23)
-        Me.DateTimePicker4.TabIndex = 34
+        Me.TextBox26.Location = New System.Drawing.Point(130, 23)
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.Size = New System.Drawing.Size(140, 23)
+        Me.TextBox26.TabIndex = 44
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(7, 26)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(61, 15)
+        Me.Label33.TabIndex = 45
+        Me.Label33.Text = "No Jadwal"
+        '
+        'Button19
+        '
+        Me.Button19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button19.Location = New System.Drawing.Point(277, 104)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(32, 25)
+        Me.Button19.TabIndex = 43
+        Me.Button19.Text = "⟳"
+        Me.Button19.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button19.UseVisualStyleBackColor = True
         '
         'DateTimePicker3
         '
         Me.DateTimePicker3.CustomFormat = "MM/dd/yyyy"
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker3.Location = New System.Drawing.Point(130, 189)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(129, 210)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(140, 23)
         Me.DateTimePicker3.TabIndex = 33
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(130, 132)
+        Me.TextBox11.Location = New System.Drawing.Point(130, 130)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(140, 23)
         Me.TextBox11.TabIndex = 32
@@ -664,15 +767,14 @@ Partial Class FormProduksi
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"MerdekAir Cup 220ml (karton)", "MerdekAir Botol 600ml (karton)"})
-        Me.ComboBox1.Location = New System.Drawing.Point(130, 81)
+        Me.ComboBox1.Location = New System.Drawing.Point(130, 105)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(140, 23)
         Me.ComboBox1.TabIndex = 31
         '
         'TextBox12
         '
-        Me.TextBox12.Enabled = False
-        Me.TextBox12.Location = New System.Drawing.Point(130, 106)
+        Me.TextBox12.Location = New System.Drawing.Point(129, 156)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(140, 23)
         Me.TextBox12.TabIndex = 30
@@ -680,7 +782,7 @@ Partial Class FormProduksi
         'TextBox10
         '
         Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(130, 54)
+        Me.TextBox10.Location = New System.Drawing.Point(130, 78)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(140, 23)
         Me.TextBox10.TabIndex = 28
@@ -688,7 +790,7 @@ Partial Class FormProduksi
         'TextBox9
         '
         Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(130, 28)
+        Me.TextBox9.Location = New System.Drawing.Point(130, 52)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(140, 23)
         Me.TextBox9.TabIndex = 11
@@ -696,25 +798,16 @@ Partial Class FormProduksi
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(7, 109)
+        Me.Label17.Location = New System.Drawing.Point(7, 133)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(73, 15)
         Me.Label17.TabIndex = 27
         Me.Label17.Text = "Work Center"
         '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(7, 220)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(83, 15)
-        Me.Label16.TabIndex = 26
-        Me.Label16.Text = "Operation End"
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(7, 195)
+        Me.Label15.Location = New System.Drawing.Point(7, 188)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(87, 15)
         Me.Label15.TabIndex = 25
@@ -723,7 +816,7 @@ Partial Class FormProduksi
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(7, 135)
+        Me.Label14.Location = New System.Drawing.Point(7, 159)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(98, 15)
         Me.Label14.TabIndex = 24
@@ -732,7 +825,7 @@ Partial Class FormProduksi
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(7, 165)
+        Me.Label13.Location = New System.Drawing.Point(7, 215)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(55, 15)
         Me.Label13.TabIndex = 23
@@ -741,7 +834,7 @@ Partial Class FormProduksi
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(7, 84)
+        Me.Label12.Location = New System.Drawing.Point(7, 108)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(45, 15)
         Me.Label12.TabIndex = 22
@@ -750,7 +843,7 @@ Partial Class FormProduksi
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(7, 57)
+        Me.Label11.Location = New System.Drawing.Point(7, 81)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 15)
         Me.Label11.TabIndex = 21
@@ -759,7 +852,7 @@ Partial Class FormProduksi
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(7, 31)
+        Me.Label10.Location = New System.Drawing.Point(7, 55)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(56, 15)
         Me.Label10.TabIndex = 11
@@ -769,7 +862,7 @@ Partial Class FormProduksi
         '
         Me.DateTimePicker2.CustomFormat = "MM/dd/yyyy"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(130, 160)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(129, 182)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(140, 23)
         Me.DateTimePicker2.TabIndex = 20
@@ -786,15 +879,15 @@ Partial Class FormProduksi
         'DataGridView4
         '
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Location = New System.Drawing.Point(276, 28)
+        Me.DataGridView4.Location = New System.Drawing.Point(316, 26)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.RowTemplate.Height = 25
-        Me.DataGridView4.Size = New System.Drawing.Size(669, 207)
+        Me.DataGridView4.Size = New System.Drawing.Size(629, 209)
         Me.DataGridView4.TabIndex = 18
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(68, 243)
+        Me.Button6.Location = New System.Drawing.Point(34, 239)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(75, 23)
         Me.Button6.TabIndex = 17
@@ -803,7 +896,7 @@ Partial Class FormProduksi
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(149, 243)
+        Me.Button7.Location = New System.Drawing.Point(115, 239)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(75, 23)
         Me.Button7.TabIndex = 16
@@ -812,7 +905,7 @@ Partial Class FormProduksi
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(230, 243)
+        Me.Button8.Location = New System.Drawing.Point(196, 239)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 15
@@ -821,21 +914,106 @@ Partial Class FormProduksi
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Label36)
+        Me.GroupBox4.Controls.Add(Me.Label35)
+        Me.GroupBox4.Controls.Add(Me.Label34)
+        Me.GroupBox4.Controls.Add(Me.TextBox28)
+        Me.GroupBox4.Controls.Add(Me.TextBox27)
+        Me.GroupBox4.Controls.Add(Me.TextBox6)
+        Me.GroupBox4.Controls.Add(Me.ComboBox4)
+        Me.GroupBox4.Controls.Add(Me.Button20)
+        Me.GroupBox4.Controls.Add(Me.DateTimePicker4)
         Me.GroupBox4.Controls.Add(Me.Button4)
         Me.GroupBox4.Controls.Add(Me.DataGridView3)
         Me.GroupBox4.Controls.Add(Me.Button3)
         Me.GroupBox4.Controls.Add(Me.Button2)
         Me.GroupBox4.Controls.Add(Me.Button1)
-        Me.GroupBox4.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox4.Controls.Add(Me.TextBox6)
-        Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Controls.Add(Me.Label6)
-        Me.GroupBox4.Location = New System.Drawing.Point(5, 294)
+        Me.GroupBox4.Controls.Add(Me.Label16)
+        Me.GroupBox4.Location = New System.Drawing.Point(5, 367)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(968, 269)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Hasil Produksi"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(13, 146)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(107, 15)
+        Me.Label36.TabIndex = 54
+        Me.Label36.Text = "Jumlah FG (karton)"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(13, 117)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(45, 15)
+        Me.Label35.TabIndex = 53
+        Me.Label35.Text = "Produk"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(14, 88)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(59, 15)
+        Me.Label34.TabIndex = 52
+        Me.Label34.Text = "ID Produk"
+        '
+        'TextBox28
+        '
+        Me.TextBox28.Location = New System.Drawing.Point(127, 143)
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(140, 23)
+        Me.TextBox28.TabIndex = 50
+        '
+        'TextBox27
+        '
+        Me.TextBox27.Enabled = False
+        Me.TextBox27.Location = New System.Drawing.Point(127, 110)
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.Size = New System.Drawing.Size(140, 23)
+        Me.TextBox27.TabIndex = 49
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(127, 81)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(140, 23)
+        Me.TextBox6.TabIndex = 48
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(127, 18)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(140, 23)
+        Me.ComboBox4.TabIndex = 47
+        '
+        'Button20
+        '
+        Me.Button20.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button20.Location = New System.Drawing.Point(273, 16)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(32, 25)
+        Me.Button20.TabIndex = 46
+        Me.Button20.Text = "⟳"
+        Me.Button20.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.CustomFormat = "MM/dd/yyyy"
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker4.Location = New System.Drawing.Point(127, 51)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(140, 23)
+        Me.DateTimePicker4.TabIndex = 34
         '
         'Button4
         '
@@ -849,15 +1027,15 @@ Partial Class FormProduksi
         'DataGridView3
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(274, 24)
+        Me.DataGridView3.Location = New System.Drawing.Point(314, 18)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowTemplate.Height = 25
-        Me.DataGridView3.Size = New System.Drawing.Size(669, 205)
+        Me.DataGridView3.Size = New System.Drawing.Size(629, 211)
         Me.DataGridView3.TabIndex = 18
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(6, 232)
+        Me.Button3.Location = New System.Drawing.Point(32, 172)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 17
@@ -866,7 +1044,7 @@ Partial Class FormProduksi
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(87, 232)
+        Me.Button2.Location = New System.Drawing.Point(113, 172)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 16
@@ -875,37 +1053,12 @@ Partial Class FormProduksi
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(168, 232)
+        Me.Button1.Location = New System.Drawing.Point(194, 172)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "ADD"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CustomFormat = "MM/dd/yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(97, 59)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(140, 23)
-        Me.DateTimePicker1.TabIndex = 14
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(97, 21)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(140, 23)
-        Me.TextBox6.TabIndex = 13
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 59)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 15)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Tanggal"
         '
         'Label6
         '
@@ -915,6 +1068,15 @@ Partial Class FormProduksi
         Me.Label6.Size = New System.Drawing.Size(56, 15)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "No Batch"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(13, 56)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(83, 15)
+        Me.Label16.TabIndex = 26
+        Me.Label16.Text = "Operation End"
         '
         'TabPage1
         '
@@ -933,7 +1095,7 @@ Partial Class FormProduksi
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(979, 663)
+        Me.TabPage1.Size = New System.Drawing.Size(979, 689)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "List Out Of Stock"
         '
@@ -1031,17 +1193,17 @@ Partial Class FormProduksi
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 29)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 36)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(987, 691)
+        Me.TabControl1.Size = New System.Drawing.Size(987, 717)
         Me.TabControl1.TabIndex = 0
         '
         'FormProduksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1004, 728)
+        Me.ClientSize = New System.Drawing.Size(1004, 765)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "FormProduksi"
@@ -1054,6 +1216,8 @@ Partial Class FormProduksi
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -1119,9 +1283,6 @@ Partial Class FormProduksi
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TextBox23 As TextBox
@@ -1164,4 +1325,22 @@ Partial Class FormProduksi
     Friend WithEvents Label24 As Label
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents Button18 As Button
+    Friend WithEvents Label32 As Label
+    Friend WithEvents TextBox25 As TextBox
+    Friend WithEvents Button19 As Button
+    Friend WithEvents TextBox26 As TextBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents TextBox28 As TextBox
+    Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Button20 As Button
+    Friend WithEvents Button21 As Button
 End Class
