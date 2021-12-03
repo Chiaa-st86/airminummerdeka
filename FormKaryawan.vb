@@ -41,7 +41,7 @@
         cmbstatus.Enabled = False
         txtumurkasir.Enabled = False
         rtbalamat.Enabled = False
-        txtcaridgv.Enabled = False
+        'txtcaridgv.Enabled = False
     End Sub
 
     Sub hidupkanform()

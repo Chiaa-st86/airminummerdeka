@@ -15,11 +15,7 @@ Public Class LoginDistributor
         Dim a As New FormMenuUtama
 
         cek = "Select * From Karyawan Where Dept = '" & UsernameTextBox.Text & "'and IDkaryawan = '" & PasswordTextBox.Text & "'"
-        'priv = "select * from Karyawan where Dept"
-        'CMD = New OleDb.OleDbCommand("Select * From Pengguna Where Username=
-        '" & txtuser.Text & "' and Password = '" & txtpassword.Text & "'", Conn)
-        'DM = CMD.ExecuteReader
-        'DM.Read()
+
         CMD = New OleDb.OleDbCommand(cek, Conn)
         CMD.ExecuteNonQuery()
         DM = CMD.ExecuteReader

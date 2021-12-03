@@ -1,8 +1,28 @@
 ﻿Public Class FormWarehouseRM
 
+    'klik datagridview
+
+
+    Private Sub DGV_MouseClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Dim DGV As DataGridView
+        DGV = DataGridView1
+        'showtoBox(e.RowIndex, DataGridView1, tglproduksi, cmbtipeproduk, tglkontrol, txtkodekontrol, txtnoproduksi, txtkodeproduk, txtjlhproduksi, txtjlhdefect, txtjlhlayak, txtnamaSPV)
+        txtkodeREQ.Text = DGV.Rows(e.RowIndex).Cells(0).Value
+        DateTimePicker1.Text = DGV.Rows(e.RowIndex).Cells(1).Value
+        txtkodeRM.Text = DGV.Rows(e.RowIndex).Cells(2).Value
+        txtnamaRM.Text = DGV.Rows(e.RowIndex).Cells(3).Value
+        txtkebutuhan.Text = DGV.Rows(e.RowIndex).Cells(4).Value
+        txtsatuanREQ.Text = DGV.Rows(e.RowIndex).Cells(5).Value
+
+        nyalainForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanREQ)
+        enableButton(btneditREQ, btndeleteREQ, btnsaveREQ)
+        btninputREQ.Enabled = True
+        'txtkodekontrol.Enabled = False
+    End Sub
+
     ' input kebutuhan
     Private Sub btninputREQ_Click(sender As Object, e As EventArgs) Handles btninputREQ.Click
-        nyalainForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM)
+        nyalainForm(txtsatuanREQ, txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM)
         clearForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM)
         DateTimePicker1.Enabled = True
         enableButton(btnsaveREQ, btndeleteREQ, btneditREQ, btncancelREQ, btnexitPURC)
@@ -10,7 +30,7 @@
 
     'LOAD
     Private Sub FormWarehouseRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        matiForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM, txtkodeRMi, txtnamaRMi, txtstokRM)
+        matiForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM, txtkodeRMi, txtnamaRMi, txtstokRM, txtsatuanREQ)
         DateTimePicker1.Enabled = False
         clearForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM, txtkodeRMi, txtnamaRMi, txtstokRM)
         tampilkanData("SELECT * FROM RM_inputRequirement", DataGridView1)
@@ -34,10 +54,10 @@
 
     'DELETE
     Private Sub btndeleteREQ_Click(sender As Object, e As EventArgs) Handles btndeleteREQ.Click
-        If (checkEmpty(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM) = True) Then
+        If (checkEmpty(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM) = True) Then
             MessageBox.Show("Jangan kosong")
         Else
-            hapusData("RM_inputRequirement", "No_PO", txtkodeREQ.Text)
+            hapusData("RM_inputRequirement", "kode_req", txtkodeREQ.Text)
             tampilkanData("SELECT * FROM RM_inputRequirement", DataGridView1)
         End If
 
@@ -61,7 +81,7 @@
 
     'SAVE   
     Private Sub btnsaveREQ_Click(sender As Object, e As EventArgs) Handles btnsaveREQ.Click
-        If (checkEmpty(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM) = True) Then
+        If (checkEmpty(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanREQ) = True) Then
             MessageBox.Show("Jangan kosong")
         Else
             Dim winny As Boolean = checkDuplicate("RM_inputRequirement", "kode_req", txtkodeREQ.Text)
@@ -70,8 +90,7 @@
             Else
                 'txtKelaminPeg.Text = Cbxkelamin.SelectedItem.ToString
                 'txtJabatanPeg.Text = cbxjabatan.SelectedItem.ToString
-                ' simpanData("RM_inputRequirement", txtnoPO.Text, tglPO.Value.ToString, txtsupplier.Text, txtalamat.Text, txtpemesan.Text, DateTimePicker2.Value.ToString, cmbTOP.SelectedItem.ToString, RichTextBox1.Text, kodeRM.Text, namaRM.Text, jlhRM.Text, satuan.Text, hargaRM.Text)
-                MessageBox.Show("Data Tersimpan")
+                simpanData("RM_inputRequirement", txtkodeREQ.Text, DateTimePicker1.Value.ToString, txtkodeRM.Text, txtnamaRM.Text, txtkebutuhan.Text, txtsatuanREQ.Text)
                 tampilkanData("SELECT * FROM RM_inputRequirement", DataGridView1)
                 clearForm(txtkebutuhan, txtkodeREQ, txtnamaadminRM, txtkodeRM, txtnamaRM, txtsatuanRM)
 
@@ -139,6 +158,22 @@
         End If
     End Sub
 
+    'KLIK DGV INVENTORI RM
+    Private Sub DGV2_MouseClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        Dim DGV2 As DataGridView
+        DGV2 = DataGridView2
+        'showtoBox(e.RowIndex, DataGridView1, tglproduksi, cmbtipeproduk, tglkontrol, txtkodekontrol, txtnoproduksi, txtkodeproduk, txtjlhproduksi, txtjlhdefect, txtjlhlayak, txtnamaSPV)
+        txtkodeRMi.Text = DGV2.Rows(e.RowIndex).Cells(0).Value
+        'DateTimePicker1.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
+        txtnamaRMi.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
+        txtstokRM.Text = DGV2.Rows(e.RowIndex).Cells(2).Value
+        'txt.Text = DGV.Rows(e.RowIndex).Cells(4).Value
+        txtsatuanRM.Text = DGV2.Rows(e.RowIndex).Cells(3).Value
 
+        nyalainForm(txtkodeRMi, txtnamaRMi, txtstokRM, txtsatuanRM)
+        enableButton(btneditInventori, btndeleteinventori, btnsaveInventori)
+        btninputREQ.Enabled = True
+        'txtkodekontrol.Enabled = False
+    End Sub
 
 End Class

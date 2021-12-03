@@ -23,6 +23,7 @@ Partial Class FormWarehouseRM
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btncancelREQ = New System.Windows.Forms.Button()
         Me.txtnamaadminRM = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -56,7 +57,8 @@ Partial Class FormWarehouseRM
         Me.txtkodeRMi = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.btncancelREQ = New System.Windows.Forms.Button()
+        Me.txtsatuanREQ = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -65,6 +67,8 @@ Partial Class FormWarehouseRM
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtsatuanREQ)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.btncancelREQ)
         Me.GroupBox1.Controls.Add(Me.txtnamaadminRM)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -91,9 +95,18 @@ Partial Class FormWarehouseRM
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Requirements"
         '
+        'btncancelREQ
+        '
+        Me.btncancelREQ.Location = New System.Drawing.Point(192, 440)
+        Me.btncancelREQ.Name = "btncancelREQ"
+        Me.btncancelREQ.Size = New System.Drawing.Size(87, 39)
+        Me.btncancelREQ.TabIndex = 39
+        Me.btncancelREQ.Text = "Cancel"
+        Me.btncancelREQ.UseVisualStyleBackColor = True
+        '
         'txtnamaadminRM
         '
-        Me.txtnamaadminRM.Location = New System.Drawing.Point(142, 186)
+        Me.txtnamaadminRM.Location = New System.Drawing.Point(142, 212)
         Me.txtnamaadminRM.Name = "txtnamaadminRM"
         Me.txtnamaadminRM.Size = New System.Drawing.Size(177, 23)
         Me.txtnamaadminRM.TabIndex = 24
@@ -101,7 +114,7 @@ Partial Class FormWarehouseRM
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 194)
+        Me.Label9.Location = New System.Drawing.Point(6, 220)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(78, 15)
         Me.Label9.TabIndex = 23
@@ -382,14 +395,22 @@ Partial Class FormWarehouseRM
         Me.DataGridView2.Size = New System.Drawing.Size(357, 150)
         Me.DataGridView2.TabIndex = 25
         '
-        'btncancelREQ
+        'txtsatuanREQ
         '
-        Me.btncancelREQ.Location = New System.Drawing.Point(192, 440)
-        Me.btncancelREQ.Name = "btncancelREQ"
-        Me.btncancelREQ.Size = New System.Drawing.Size(87, 39)
-        Me.btncancelREQ.TabIndex = 39
-        Me.btncancelREQ.Text = "Cancel"
-        Me.btncancelREQ.UseVisualStyleBackColor = True
+        Me.txtsatuanREQ.Location = New System.Drawing.Point(142, 186)
+        Me.txtsatuanREQ.Name = "txtsatuanREQ"
+        Me.txtsatuanREQ.Size = New System.Drawing.Size(177, 23)
+        Me.txtsatuanREQ.TabIndex = 41
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 194)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(43, 15)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "Satuan"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'FormWarehouseRM
         '
@@ -445,4 +466,6 @@ Partial Class FormWarehouseRM
     Friend WithEvents txtnamaadminRM As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btncancelREQ As Button
+    Friend WithEvents txtsatuanREQ As TextBox
+    Friend WithEvents Label11 As Label
 End Class
